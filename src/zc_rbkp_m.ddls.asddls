@@ -86,45 +86,59 @@ define root view entity ZC_RBKP_M
       @UI : { identification: [ { position: 100, label: 'Invoice time' } ] }
       @EndUserText.quickInfo: 'Invoice time'
       cputm,
+
       @UI : { identification: [ { position:110, label: 'Reference Document no' } ] }
       @EndUserText.quickInfo: 'Reference Document no'
       xblnr,
+
       @UI : {  lineItem: [{position: 60, importance: #HIGH, label: 'Vendor' }],
       identification: [ { position: 120, label: 'Vendor' } ] }
       @EndUserText.quickInfo: 'Vendor'
       lifnr,
+
       @UI : { identification: [ { position: 130, label: 'Currency' } ] }
       @EndUserText.quickInfo: 'Currency'
       @Consumption.valueHelpDefinition: [{entity: {name: 'I_Currency', element: 'Currency' }}]
       waers,
+
       @UI : {  lineItem: [{position: 110, importance: #HIGH, label: 'Exchange Rate' }],
       identification: [ { position: 140, label: 'Exchange Rate' } ] }
       @EndUserText.quickInfo: 'Exchange Rate'
       kursf,
+
       @UI : { lineItem: [{position: 70, importance: #HIGH, label: 'Tax Amount' }],
        identification: [ { position: 150, label: 'Tax Amount' } ] }
       @EndUserText.quickInfo: 'Tax Amount'
       @Semantics.amount.currencyCode: 'waers'
       wmwst1,
+
       @UI : { lineItem: [{position: 80, importance: #HIGH, label: 'Invoice Amount' }],
       identification: [ { position: 160, label: 'Invoice Amount' } ] }
       @EndUserText.quickInfo: 'Invoice Amount'
       @Semantics.amount.currencyCode: 'waers'
       dmbtr,
+
       @UI : { lineItem: [{position: 100, importance: #HIGH, label: 'Tax code' }],
       identification: [ { position: 170, label: 'Tax code' } ] }
       @EndUserText.quickInfo: 'Tax code'
       mwskz1,
+
       @UI : { identification: [ { position: 180, label: 'Terms of Payment' } ] }
       @EndUserText.quickInfo: 'Terms of Payment'
       zterm,
-      @UI : { lineItem: [{position: 90, importance: #HIGH, label: 'Invoice status' }],
-      identification: [ { position: 190, label: 'Invoice status' } ] }
+
+      @UI : { lineItem: [{position: 90, importance: #HIGH, label: 'Invoice status',criticality: 'StatusCriticality' }],
+      identification: [ { position: 190, label: 'Invoice status',criticality: 'StatusCriticality' } ] }
       @EndUserText.quickInfo: 'Invoice status'
       @ObjectModel.text.element: ['docst']
       rbstat,
+
       @UI : { identification: [ { position: 200, label: 'Invoice status' } ] }
       @EndUserText.quickInfo: 'Invoice status'
       @UI.hidden: true
-      docst
+      docst,
+
+      @UI.hidden: true
+      StatusCriticality
+
 }
