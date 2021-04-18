@@ -1,0 +1,18 @@
+managed  implementation in class zbp_i_rbkp_m unique;
+
+define behavior for ZI_RBKP_M //alias <alias_name>
+persistent table zrbkp
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+    // instance action and dynamic action control
+  action ( features : instance ) post result [1] $self;
+   action ( features : instance ) saveComplete result [1] $self;
+    action ( features : instance ) park result [1] $self;
+
+}

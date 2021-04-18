@@ -1,0 +1,12 @@
+projection;
+
+define behavior for ZC_RBKP_M //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+  use action post;
+  use action saveComplete;
+  use action park;
+}

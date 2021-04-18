@@ -1,0 +1,4 @@
+@EndUserText.label: 'RBKP Service Header Managed'
+define service ZC_RBKP_MAN_SD {
+  expose ZC_RBKP_M as INVHDR;
+}
