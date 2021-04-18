@@ -24,7 +24,7 @@ returns {
       mwskz1 : abap.char(2);
       zterm  : abap.char(4);
       rbstat : abap.char(1);
-      docst  : abap.char( 10 );
+      docst  : abap.char( 30 );
   
 }
 implemented by method zcl_rbkp_m=>get_data;
